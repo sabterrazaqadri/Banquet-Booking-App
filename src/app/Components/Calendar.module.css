@@ -1,0 +1,17 @@
+.booked-date {
+    background-color: rgba(0, 128, 0, 0.2);
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .booked-date::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: green;
+    border-radius: 50%;
+    top: 0.5em;
+    right: 0.5em;
+  }
+  

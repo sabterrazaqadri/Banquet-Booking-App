@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Add this to your global CSS file */
+.react-datepicker {
+  border: 1px solid #e2e8f0; /* Tailwind color for gray-200 */
+  border-radius: 0.5rem; /* Tailwind rounded-lg */
+  padding: 0.5rem;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #3b82f6 !important; /* Tailwind color for blue-500 */
+  color: white !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #60a5fa !important; /* Tailwind color for blue-400 */
+}
+
+
+@keyframes gradientBackground {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientBackground 12s ease infinite;
+}
+
